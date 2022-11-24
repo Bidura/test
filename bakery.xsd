@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:element name="bakery">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="product" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>   
+                <xs:sequence>
+                    <xs:element name="name">
+                    <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                       <xs:pattern value="[A-Z]([a-z])*" /> 
+                    </xs:restriction>  
+                    </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="price">
+                    <xs:simpleType>
+                     <xs:restriction base="xs:float">
+                      <xs:minInclusive value="50.0"></xs:minInclusive>
+                      <xs:maxInclusive value="150.50"></xs:maxInclusive>  
+                    </xs:restriction>
+                    </xs:simpleType>     
+                    </xs:element>
+                    <xs:element name="disc" type="xs:int">   
+                    </xs:element>
+                                      
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+               
+</xs:schema>    

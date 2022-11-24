@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+<xs:element name="payroll">
+<xs:ComplexType>
+<xs:sequence>
+    <xs:element name="heading" type="xs:string"/>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="dept" type="xs:string"/>
+    <xs:element name="salary" type="xs:decimal">
+    <xs:SimpleType>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="20000"/>
+      <xs:maxInclusive value="1200000"/>
+    </xs:restriction>
+  </xs:SimpleType>
+</xs:element>
+    <xs:element name="doj" type="xs:date"/>
+    <xs:element name="email" type="xs:string"/>
+    <xs:element name="empid" type="xs:integer">
+    <xs:SimpleType>
+        <xs:restriction base="xs:integer">
+        <xs:minInclusive value="123">
+        <xs:maxInclusive value="923">
+        </xs:restriction>
+    </xs:SimpleType>
+    </xs:element>
+
+    <xs:element name="phno" type="xs:integer">
+    <xs:SimpleType>
+    <xs:restriction base="xs:integer">
+    <xs:pattern value="[0-9]{8}"/>
+    </xs:restriction>
+    </xs:SimpleType>
+    </xs:element>
+
+</xs:sequence>
+</xs:ComplexType>
+</xs:element>
+</xs:schema>

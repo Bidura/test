@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="bakery.xsl" ?>
+<bakery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:SchemaLocation="D://html//bakery.xsd">
+<product>
+    <name>Biscuits</name>
+    <price>55.50</price>
+    <disc>5</disc>
+</product>
+<product>
+    <name>Cake</name>
+    <price>250.0</price>
+    <disc>9</disc>
+</product>
+
+</bakery>
